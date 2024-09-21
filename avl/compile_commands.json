@@ -1,0 +1,19 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-ansi",
+      "-pedantic",
+      "-g",
+      "-c",
+      "-o",
+      "main.o",
+      "main.c"
+    ],
+    "directory": "/home/gabriel/src/algIII/avl",
+    "file": "/home/gabriel/src/algIII/avl/main.c",
+    "output": "/home/gabriel/src/algIII/avl/main.o"
+  }
+]
