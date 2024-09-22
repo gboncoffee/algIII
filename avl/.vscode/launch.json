@@ -11,7 +11,7 @@
 			"program": "${workspaceFolder}/myavl",
 			"args": [],
 			"cwd": "${workspaceFolder}",
-            "stdio": ["test/teste2.in", null, null]
+            "stdio": ["test/teste3.in", null, null]
 		}
 	]
 }

@@ -77,13 +77,11 @@ Node*
 retrace(Node* tree)
 {
     int childBf;
-    int bf = HEIGHT(tree->left) - HEIGHT(tree->right);
+    int bf       = HEIGHT(tree->left) - HEIGHT(tree->right);
+    tree->height = recomputeHeight(tree);
+
     switch (bf)
     {
-    case 1:
-    case -1:
-        tree->height++;
-        break;
     case 2:
         childBf = HEIGHT((tree->left)->left) - HEIGHT((tree->left)->right);
         if (childBf == 1)
@@ -142,9 +140,8 @@ removeMax(Node* tree, int* key)
         return left;
     }
 
-    tree->right = removeMax(tree->right, key);
-    if (tree->left != NULL)
-        tree->height = (tree->left)->height + 1;
+    tree->right  = removeMax(tree->right, key);
+    tree->height = recomputeHeight(tree);
 
     return tree;
 }
@@ -159,14 +156,14 @@ Remove(Node* tree, int key)
     if (key < tree->key)
     {
         tree->left   = Remove(tree->left, key);
-        tree->height = HEIGHT(tree->right) + 1;
-        return tree;
+        tree->height = recomputeHeight(tree);
+        return retrace(tree);
     }
     if (key > tree->key)
     {
         tree->right  = Remove(tree->right, key);
-        tree->height = HEIGHT(tree->left) + 1;
-        return tree;
+        tree->height = recomputeHeight(tree);
+        return retrace(tree);
     }
 
     if (tree->right == NULL)
@@ -183,9 +180,9 @@ Remove(Node* tree, int key)
     }
 
     tree->left   = removeMax(tree->left, &tree->key);
-    tree->height = (tree->right)->height + 1;
+    tree->height = recomputeHeight(tree);
 
-    return tree;
+    return retrace(tree);
 }
 
 void

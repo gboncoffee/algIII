@@ -10,3 +10,9 @@ myavl: main.o avl.o
 clean:
 	-rm *.o
 	-rm myavl
+
+test: myavl
+	./myavl < test/teste1.in | diff - test/teste1.out
+	./myavl < test/teste2.in | diff - test/teste2.out
+	./myavl < test/teste3.in | diff - test/teste3.out
+	./myavl < test/teste4.in | diff - test/teste4.out
