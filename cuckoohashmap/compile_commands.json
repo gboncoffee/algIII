@@ -1,0 +1,19 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-ansi",
+      "-pedantic",
+      "-g",
+      "-c",
+      "-o",
+      "ht.o",
+      "ht.c"
+    ],
+    "directory": "/home/gabriel/src/algIII/cuckoohashmap",
+    "file": "/home/gabriel/src/algIII/cuckoohashmap/ht.c",
+    "output": "/home/gabriel/src/algIII/cuckoohashmap/ht.o"
+  }
+]
