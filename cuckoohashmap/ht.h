@@ -3,6 +3,7 @@
 
 #define M (11)
 
+/* We ensure Empty is 0 so we can just memset() the map in the init function. */
 typedef enum
 {
     Empty = 0,
@@ -25,7 +26,7 @@ typedef struct
 void InitMap(HashMap* map);
 void Insert(HashMap* map, int key);
 void Remove(HashMap* map, int key);
-int* Search(HashMap* map, int key);
+int* Search(HashMap* map, int key); /* Not used. */
 void PrintTables(HashMap* map);
 
 #endif /* HT_H_ */

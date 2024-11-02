@@ -72,6 +72,10 @@ Remove(HashMap* map, int key)
         map->t1[pt1].state = Excluded;
 }
 
+/*
+ * Below is only the functionality specific to printing the map state.
+ */
+
 typedef struct
 {
     int  key;
@@ -109,6 +113,8 @@ PrintTables(HashMap* map)
     int        i;
     PrintEntry entries[M * 2];
     int        numberOfEntries = 0;
+
+    /* Get the entries from both tables to qsort them after. */
     for (i = 0; i < M; i += 1)
     {
         if (map->t1[i].state == Occupied)
