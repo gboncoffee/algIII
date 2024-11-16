@@ -1,0 +1,36 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-ansi",
+      "-pedantic",
+      "-g",
+      "-c",
+      "-o",
+      "main.o",
+      "main.c"
+    ],
+    "directory": "/home/gabriel/src/algIII/rb",
+    "file": "/home/gabriel/src/algIII/rb/main.c",
+    "output": "/home/gabriel/src/algIII/rb/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-ansi",
+      "-pedantic",
+      "-g",
+      "-c",
+      "-o",
+      "rb.o",
+      "rb.c"
+    ],
+    "directory": "/home/gabriel/src/algIII/rb",
+    "file": "/home/gabriel/src/algIII/rb/rb.c",
+    "output": "/home/gabriel/src/algIII/rb/rb.o"
+  }
+]
